@@ -34,8 +34,8 @@ dev = [
 claude-code-proxy = "claude_code_proxy.__main__:main"
 
 [project.urls]
-Repository = "https://github.com/YOUR_USERNAME/claude-code-proxy"
-Issues = "https://github.com/YOUR_USERNAME/claude-code-proxy/issues"
+Repository = "https://github.com/seanbabalala/claude-code-proxy"
+Issues = "https://github.com/seanbabalala/claude-code-proxy/issues"
 
 [build-system]
 requires = ["hatchling"]

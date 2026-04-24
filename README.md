@@ -22,7 +22,7 @@ Claude Code  ──Anthropic Messages──▶  claude-code-proxy  ──OpenAI 
 
 ```bash
 # 1. Clone & install
-git clone https://github.com/YOUR_USERNAME/claude-code-proxy.git
+git clone https://github.com/seanbabalala/claude-code-proxy.git
 cd claude-code-proxy
 uv sync          # or: pip install -e .
 
