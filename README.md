@@ -1,6 +1,17 @@
-# Claude Code Proxy
+<h1 align="center">Claude Code Proxy</h1>
 
-A lightweight reverse proxy that lets [Claude Code](https://docs.anthropic.com/en/docs/claude-code) talk to any **OpenAI-compatible `chat/completions`** endpoint.
+<p align="center">
+  <em>Let Claude Code talk to any OpenAI-compatible API gateway.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/seanbabalala/claude-code-proxy/actions/workflows/ci.yml"><img src="https://github.com/seanbabalala/claude-code-proxy/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11%2B-blue?logo=python&logoColor=white" alt="Python 3.11+"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"></a>
+  <a href="https://github.com/seanbabalala/claude-code-proxy/issues"><img src="https://img.shields.io/github/issues/seanbabalala/claude-code-proxy" alt="Issues"></a>
+</p>
+
+---
 
 Many companies expose Claude models behind an OpenAI-compatible API gateway. Claude Code, however, speaks the **Anthropic Messages** protocol. This proxy sits in between and translates on the fly — no client patches required.
 
@@ -108,6 +119,10 @@ uv run pytest
 - `count_tokens` is a heuristic estimate (byte-length ÷ 4), not an exact tokenizer count.
 - Non-text multimodal content blocks (images, etc.) are flattened to text placeholders.
 - The proxy focuses on Claude Code compatibility rather than full Anthropic API surface coverage.
+
+## Contributing
+
+Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) before opening a PR.
 
 ## License
 
