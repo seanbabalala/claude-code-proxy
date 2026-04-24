@@ -1,0 +1,55 @@
+[project]
+name = "claude-code-proxy"
+version = "0.1.0"
+description = "Reverse proxy that translates Anthropic Messages API to OpenAI chat/completions, enabling Claude Code to work with any OpenAI-compatible gateway."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+keywords = ["claude", "claude-code", "anthropic", "openai", "proxy", "api-gateway"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "fastapi>=0.115.0,<1.0.0",
+  "httpx>=0.28.0,<1.0.0",
+  "rich>=14.0.0,<15.0.0",
+  "uvicorn>=0.35.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0,<9.0.0",
+  "pytest-asyncio>=0.24.0,<1.0.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.0,<9.0.0",
+  "pytest-asyncio>=0.24.0,<1.0.0",
+]
+
+[project.scripts]
+claude-code-proxy = "claude_code_proxy.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/seanbabalala/claude-code-proxy"
+Issues = "https://github.com/seanbabalala/claude-code-proxy/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/claude_code_proxy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
